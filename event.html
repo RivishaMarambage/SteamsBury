@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturday Night Jazz - Steamsbury Events</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+
+            <!--  LOGO IMAGE  -->
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="event.html" class="nav-link active">Events</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+                <a href="offers.html" class="mobile-nav-link">Offers</a>
+                <a href="event.html" class="mobile-nav-link active">Events</a>
+                <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Event Hero Section -->
+    <section class="event-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="#" class="breadcrumb-link">Events</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Saturday Night Jazz</span>
+            </div>
+
+            <!-- Event Header -->
+            <div class="event-header">
+                <!-- Event Image -->
+                <div class="event-image-wrapper">
+                    <img src="./EventAssets/music.jpg" alt="Saturday Night Jazz" class="event-image">
+
+                    <div class="date-badge">
+                        <span class="date-month">Dec</span>
+                        <span class="date-day">31</span>
+                    </div>
+
+                    <div class="image-actions">
+                        <button class="action-btn" id="shareBtn">
+                            <span class="material-icons">share</span>
+                        </button>
+                        <button class="action-btn" id="favoriteBtn">
+                            <span class="material-icons">favorite_border</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event Details -->
+                <div class="event-details">
+                    <div class="event-category">
+                        <span class="material-icons category-icon">music_note</span>
+                        <span class="category-text">Live Music</span>
+                    </div>
+
+                    <h1 class="event-title">Tuesday Night Jazz</h1>
+
+                    <p class="event-description">
+                        Enjoy smooth jazz rhythms with our signature lattes, featuring the local quartet "Blue Note". An
+                        evening of soulful melodies and artisan coffee in our intimate setting.
+                    </p>
+
+                    <!-- Key Info Cards -->
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <span class="material-icons info-icon">schedule</span>
+                            <div class="info-content">
+                                <p class="info-label">Time</p>
+                                <p class="info-value">8:00 PM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <span class="material-icons info-icon">place</span>
+                            <div class="info-content">
+                                <p class="info-label">Location</p>
+                                <p class="info-value">Main Lobby</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <span class="material-icons info-icon">confirmation_number</span>
+                            <div class="info-content">
+                                <p class="info-label">Price</p>
+                                <p class="info-value price">Free Entry</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <span class="material-icons info-icon">groups</span>
+                            <div class="info-content">
+                                <p class="info-label">Capacity</p>
+                                <p class="info-value">50 Guests</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Section -->
+                    <div class="booking-card">
+                        <h3 class="booking-title">Reserve Your Table</h3>
+                        <form class="booking-form" id="bookingForm">
+                            <div class="form-row">
+                                <input type="text" placeholder="First Name" class="form-input" required>
+                                <input type="text" placeholder="Last Name" class="form-input" required>
+                            </div>
+                            <input type="email" placeholder="Email Address" class="form-input" required>
+                            <input type="tel" placeholder="Phone Number" class="form-input" required>
+                            <select class="form-input" required>
+                                <option value="">Number of Guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4+ Guests</option>
+                            </select>
+                            <button type="submit" class="btn-submit">
+                                <span>Reserve Your Spot</span>
+                                <span class="material-icons">arrow_forward</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Social Proof -->
+                    <div class="social-proof">
+                        <div class="attendee-avatars">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8XIMXoLm9ob6JaiYNFSH4UjQ17xxUo72bengICXfUxB_vC4J6pQnTT5f6HZttBA7JZKYKJQNKM5sujwulTwZoQIu-ALUBFh31McN57f6pOu_YkKP_tHus0PjLefA6ucfdsp5I9okVY4tYltjv_szLUZXYVyuQpGRfnfQAOEyHxtE15QKt01sekzhIkGf0Ogoer8XV_PO2LmlhpX8mY2IT4ouyyvgaTSRCTuaPhnH_3u8WFmocNNmEp069A5rNEnqkiwvNaZd6uyU"
+                                alt="Attendee" class="avatar">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqy3MRosOqmx1qp3Xvm12KBtFEIMsALg0H0y6OVtmJfUzDODlPa-7A4QKoX8U-_namgHpF4MNAkE9eXAey83N5vv94gjQRK1rVq8u_3QuehSXQ26oGkUeeSBJkrKCriYiULoyBMtFaGb2UnehKIn5Dy0Y753_vam50fiDwz0QA4jgV_Hxq7n_obgVZze8eZXHRdn0tvdBmoQ8SkeAYs3CPm5SiGsAi4iMTvkdzaRgR01q45AvjrtewH2kns85VN0YUQNH-CChwe2g"
+                                alt="Attendee" class="avatar">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG0bC2_903rC3lO5tFJ6Uq5F3IUriOqMI3T7i66ZirCJ8I3ygwRJ_ImpDkxg08KIIMfxRFkcK_odaPmI3dk16ZNxbSDWwLOQEkL9he5fxvdhSsvXWYxwRuZx3cJD5lOrLqz1xZdfWsnvnAciYcE1dnUqgFiJeMG7N3SPjkMU09jc6P2fHbDcfFQqZ_wabrQ8PPIILKd8qEpB7BvpEmsZrMuV8-29B8j_s-ZRaCSR2aR9gpRMIcauk9uO7J7zjFOMih2QXxpMXcU-M"
+                                alt="Attendee" class="avatar">
+                        </div>
+                        <div>
+                            <p class="proof-count">32 people interested</p>
+                            <p class="proof-cta">Join them tonight!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Tabs -->
+    <section class="tabs-section">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-button active" data-tab="details">Event Details</button>
+                <button class="tab-button" data-tab="lineup">Lineup</button>
+                <button class="tab-button" data-tab="venue">Venue Info</button>
+            </div>
+
+            <!-- Tab Content: Details -->
+            <div class="tab-content active" id="details">
+                <div class="tab-grid">
+                    <div class="tab-main">
+                        <h2 class="tab-heading">About This Event</h2>
+                        <div class="content-text">
+                            <p>
+                                Join us for an unforgettable evening of smooth jazz and exceptional coffee. Our Saturday
+                                Night Jazz series features talented local musicians in an intimate setting perfect for
+                                unwinding after a long week.
+                            </p>
+                            <p>
+                                This week, we're thrilled to host the "Blue Note" quartet, known for their sophisticated
+                                interpretations of jazz standards and original compositions. Their melodic style creates
+                                the perfect ambiance for conversation and connection.
+                            </p>
+                            <h3 class="content-subheading">What to Expect</h3>
+                            <ul class="content-list">
+                                <li>
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Three 45-minute sets with intermissions</span>
+                                </li>
+                                <li>
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Full menu available throughout the evening</span>
+                                </li>
+                                <li>
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Special cocktail menu curated for the event</span>
+                                </li>
+                                <li>
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Reserved seating for table bookings</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-sidebar">
+                        <div class="info-box">
+                            <h3 class="info-box-title">
+                                <span class="material-icons">info</span>
+                                Important Information
+                            </h3>
+                            <div class="info-box-content">
+                                <div class="info-item">
+                                    <span class="material-icons">access_time</span>
+                                    <div>
+                                        <p class="item-title">Arrival Time</p>
+                                        <p class="item-text">Doors open at 6:30 PM. We recommend arriving early to
+                                            secure the best seating.</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <span class="material-icons">restaurant</span>
+                                    <div>
+                                        <p class="item-title">Food & Drinks</p>
+                                        <p class="item-text">Full menu available. No minimum purchase required.</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <span class="material-icons">local_parking</span>
+                                    <div>
+                                        <p class="item-title">Parking</p>
+                                        <p class="item-text">Street parking available. Public lot 2 blocks north.</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <span class="material-icons">accessible</span>
+                                    <div>
+                                        <p class="item-title">Accessibility</p>
+                                        <p class="item-text">Wheelchair accessible venue with accessible restrooms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="special-offer">
+                            <h3 class="offer-title">
+                                <span class="material-icons">celebration</span>
+                                Special Offer
+                            </h3>
+                            <p class="offer-text">
+                                Book a table for 4+ guests and receive a complimentary dessert platter to share!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Lineup -->
+            <div class="tab-content" id="lineup">
+                <h2 class="tab-heading">Featured Artists</h2>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <div class="artist-header">
+                            <div class="artist-avatar">BN</div>
+                            <div>
+                                <h3 class="artist-name">Blue Note Quartet</h3>
+                                <p class="artist-role">Main Act</p>
+                            </div>
+                        </div>
+                        <p class="artist-bio">
+                            A local favorite known for their sophisticated jazz interpretations. The quartet features
+                            saxophone, piano, double bass, and drums, creating a rich, layered sound that's both
+                            contemporary and classic.
+                        </p>
+                        <div class="artist-tags">
+                            <span class="tag">Jazz</span>
+                            <span class="tag">Standards</span>
+                            <span class="tag">Originals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Venue -->
+            <div class="tab-content" id="venue">
+                <h2 class="tab-heading">Venue Information</h2>
+                <div class="venue-grid">
+                    <div>
+                        <h3 class="venue-subtitle">Location</h3>
+                        <div class="venue-info">
+                            <div class="venue-item">
+                                <span class="material-icons">place</span>
+                                <p>911, Pannipitiya road, Battaramulla<br>Sri Lanka</p>
+                            </div>
+                            <div class="venue-item">
+                                <span class="material-icons">phone</span>
+                                <p>(555) 123-4567</p>
+                            </div>
+                            <div class="venue-item">
+                                <span class="material-icons">email</span>
+                                <p>hello@steamsbury.com</p>
+                            </div>
+                        </div>
+                        <button class="btn-directions">
+                            <span class="material-icons">directions</span>
+                            <span>Get Directions</span>
+                        </button>
+                    </div>
+                    <div class="map-placeholder">
+                        <span class="material-icons map-icon">map</span>
+                        <p>Interactive Map</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Events -->
+    <section class="related-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">You Might Also Like</h2>
+                <a href="#" class="view-all">
+                    View All <span class="material-icons">arrow_forward</span>
+                </a>
+            </div>
+            <div class="events-grid">
+                <!-- Related Event 1 -->
+                <div class="event-card">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYpyiY3W5d8ONQe3Z7xGFx3MQGQ5ycBrCbWU3TltUIIYtgUHvKjbkKi7cFgwuVv3zpbX6VCuHkYz3oNIGKMjarzQaOFyDDUOxv97obGPKFMIzZIzvQI-RPr7q9CZfcYRtSkbpSnoc9KtqvNy7YR1EouabsQtuzfvFlwJPWHGDIDLaoVUV8NbRwGH9u0H3ehZX7YcbzrF__yzhw-sq37QRWhIjbuZiKhhbra1SmLr5KduLVh_uIqk4k1N2FS4haXW7E4Yc_e-4sYaI"
+                            alt="Event">
+                        <div class="card-date">
+                            <span class="date-month">Oct</span>
+                            <span class="date-day">15</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Latte Art Workshop</h3>
+                        <div class="card-time">
+                            <span class="material-icons">schedule</span>
+                            10:00 AM - 12:00 PM
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-price">Rs 800 Entry</span>
+                            <button class="card-link">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Event 2 -->
+                <div class="event-card">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ5vDeJ_7pExUYO8d7Za4aqR5PFdvsrB6w31ptFi1Uhsoi8eq_O1-BIpkoxeyNGlH5xRztNG8UAtvSZ87zt85EByXE1toMR_JOL0Vowp8qKJYW9Oa-NVjEkuA7b0o04RPBaaye3vS4XKWTwk-Y0IjOtALFBQYKZIlpzAsx0dY1q0tpqDFI3KAFpviz5sRYPmCkCbzD-Zzz9G7zQpo5s1X7FAv0imbcVI-LDBWdlm0Vb86TZNRcqfJBijA-YMErTwwNiRVgqyLkxu0"
+                            alt="Event">
+                        <div class="card-date">
+                            <span class="date-month">Oct</span>
+                            <span class="date-day">18</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Board Game Night</h3>
+                        <div class="card-time">
+                            <span class="material-icons">schedule</span>
+                            6:00 PM - 9:00 PM
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-price">Free Entry</span>
+                            <button class="card-link">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Event 3 -->
+                <div class="event-card">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjFs_hpYsxQkkmXelBQRutTP0Wy_vl-roOFHXZyX9WCcldKCDfpeKypoPPseAyrdZpgP1fqBDh2p0vyDCjBNbPfTH_eBrKBmY0TmMX8v7JEioGQyTUndQJko7UIY2gPbfAWtjBKFVkQQmrHxdBMBpQHDuuwTBa9zhXNpUym2Us11anyRV39VI2g4g-JqNLM86BlNT2Yf5756JgTwqz0CdzB3-J--6z3Pds9bNLUxp9n0qNZmMj0ngg4Rdc-f6XmtAM6Z1Ad1eFXvE"
+                            alt="Event">
+                        <div class="card-date">
+                            <span class="date-month">Oct</span>
+                            <span class="date-day">22</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Autumn Tea Tasting</h3>
+                        <div class="card-time">
+                            <span class="material-icons">schedule</span>
+                            4:00 PM - 6:00 PM
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-price">Rs 400 Entry</span>
+                            <button class="card-link">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="event.js"></script>
+    <script src="back-to-top.js"></script>
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Steamsbury</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css?v=5">
+    <link rel="stylesheet" href="wallet.css?v=5">
+    <link rel="stylesheet" href="back-to-top.css">
+</head>
+
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="index.html">
+            <img src="./assets/navbarlogo.png" alt="Steamsbury" class="mobile-logo">
+        </a>
+        <button class="hamburger-btn" id="mobileMenuBtn">
+            <span class="material-icons">menu</span>
+        </button>
+    </header>
+
+    <!-- Expandable Sidebar Navigation -->
+    <div class="sidebar-navigation" id="sidebar">
+        <!-- Toggle Button -->
+        <button class="toggle-btn" id="toggleBtn">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <a href="index.html">
+                <img src="./DashboardAssets/sidebar-logo.png" alt="Steams Bury" class="sidebar-logo-img">
+            </a>
+        </div>
+
+        <!-- Navigation Section -->
+        <nav class="nav-section">
+            <div class="nav-title">MAIN</div>
+
+            <ul class="nav-list">
+                <li class="nav-item" data-page="dashboard">
+                    <a href="dashboard.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="menu-auth">
+                    <a href="menu-auth.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        <span class="nav-text">Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item active" data-page="wallet">
+                    <a href="wallet.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
+                        <span class="nav-text">Wallet</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="event-auth">
+                    <a href="event-auth.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">event</span>
+                        <span class="nav-text">Event</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="profile">
+                    <a href="dashboard.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="nav-text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Logout Section -->
+        <div class="logout-section">
+            <a href="index.html" class="nav-link-item">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard-wrapper">
+
+        <!-- Main Content -->
+        <main class="wallet-main">
+            <div class="container">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <!-- Breadcrumb -->
+                    <div class="breadcrumb" style="margin-bottom: 20px;">
+                        <a href="dashboard.html" class="breadcrumb-link"
+                            style="color: #6B7280; text-decoration: none; font-size: 0.9rem;">Dashboard</a>
+                        <span class="breadcrumb-separator" style="margin: 0 8px; color: #9CA3AF;">/</span>
+                        <span class="breadcrumb-current"
+                            style="color: #111827; font-weight: 500; font-size: 0.9rem;">Wallet</span>
+                    </div>
+                    <h1 class="page-title">My Wallet</h1>
+                    <p class="page-subtitle">Manage your digital balance, payments, and rewards.</p>
+                </div>
+
+                <!-- Wallet Grid -->
+                <div class="wallet-grid">
+                    <!-- Left Column -->
+                    <div class="wallet-left">
+                        <!-- Balance Cards -->
+                        <div class="balance-cards">
+                            <!-- Current Balance -->
+                            <div class="balance-card">
+                                <div class="card-glow"></div>
+                                <div class="card-header">
+                                    <div class="card-icon balance-icon">
+                                        <span class="material-icons">account_balance_wallet</span>
+                                    </div>
+                                    <span class="status-badge active">Active</span>
+                                </div>
+                                <p class="card-label">Current Balance</p>
+                                <h2 class="card-value">LKR 4,500.00</h2>
+                                <p class="card-info success">
+                                    <span class="material-icons">trending_up</span>
+                                    +LKR 1,000 added recently
+                                </p>
+                            </div>
+
+                            <!-- Loyalty Points -->
+                            <div class="balance-card">
+                                <div class="card-header">
+                                    <div class="card-icon loyalty-icon">
+                                        <span class="material-icons">loyalty</span>
+                                    </div>
+                                    <span class="status-badge gold">Gold Tier</span>
+                                </div>
+                                <p class="card-label">Loyalty Points</p>
+                                <h2 class="card-value">850 <span class="pts">pts</span></h2>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                                <p class="card-info">150 pts until Platinum</p>
+                            </div>
+                        </div>
+
+                        <!-- QR Code Section -->
+                        <div class="qr-section">
+                            <div class="qr-content">
+                                <div class="qr-text">
+                                    <div class="qr-badge">
+                                        <span class="material-icons">qr_code_scanner</span>
+                                        <span>In-Store Payment</span>
+                                    </div>
+                                    <h3>Scan & Pay at Counter</h3>
+                                    <p>Present this code to the barista to pay instantly with your wallet balance.</p>
+                                    <button class="btn btn-refresh">
+                                        <span class="material-icons">refresh</span>
+                                        Refresh Code
+                                    </button>
+                                </div>
+                                <div class="qr-code-wrapper">
+                                    <div class="qr-code">
+                                        <div class="qr-image">
+                                            <div class="qr-center">
+                                                <span class="material-icons">local_cafe</span>
+                                            </div>
+                                        </div>
+                                        <p class="qr-number">8839 4210 5592</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Transactions -->
+                        <div class="transactions-section">
+                            <div class="section-header">
+                                <h3>Recent Transactions</h3>
+                                <a href="#" class="view-all">
+                                    View All
+                                    <span class="material-icons">arrow_forward</span>
+                                </a>
+                            </div>
+
+                            <div class="transactions-list">
+                                <!-- Transaction 1 -->
+                                <div class="transaction-item">
+                                    <div class="transaction-icon coffee">
+                                        <span class="material-icons">coffee</span>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <h4>Caramel Macchiato</h4>
+                                        <p>Today, 10:30 AM • Downtown Branch</p>
+                                    </div>
+                                    <div class="transaction-right">
+                                        <span class="status-badge success">Success</span>
+                                        <span class="transaction-amount debit">- LKR 850.00</span>
+                                    </div>
+                                </div>
+
+                                <!-- Transaction 2 -->
+                                <div class="transaction-item">
+                                    <div class="transaction-icon topup">
+                                        <span class="material-icons">add_card</span>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <h4>Wallet Top Up</h4>
+                                        <p>Yesterday, 6:15 PM • Online Payment</p>
+                                    </div>
+                                    <div class="transaction-right">
+                                        <span class="status-badge success">Success</span>
+                                        <span class="transaction-amount credit">+ LKR 2,000.00</span>
+                                    </div>
+                                </div>
+
+                                <!-- Transaction 3 -->
+                                <div class="transaction-item">
+                                    <div class="transaction-icon shop">
+                                        <span class="material-icons">local_mall</span>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <h4>Premium Arabica Beans</h4>
+                                        <p>Oct 24, 2:00 PM • Online Store</p>
+                                    </div>
+                                    <div class="transaction-right">
+                                        <span class="status-badge pending">Pending</span>
+                                        <span class="transaction-amount debit">- LKR 1,800.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="wallet-right">
+                        <!-- Add Money Card -->
+                        <div class="add-money-card">
+                            <div class="add-money-glow"></div>
+                            <h3>Add Money</h3>
+                            <p>Recharge your wallet instantly.</p>
+
+                            <div class="quick-amounts">
+                                <button class="amount-btn">
+                                    <span class="amount-label">LKR</span>
+                                    1000
+                                </button>
+                                <button class="amount-btn">
+                                    <span class="amount-label">LKR</span>
+                                    2000
+                                </button>
+                                <button class="amount-btn">
+                                    <span class="amount-label">LKR</span>
+                                    5000
+                                </button>
+                            </div>
+
+                            <div class="custom-amount">
+                                <label>Custom Amount (LKR)</label>
+                                <div class="amount-input">
+                                    <span class="currency">LKR</span>
+                                    <input type="number" placeholder="0.00">
+                                </div>
+                                <button class="btn btn-topup">
+                                    <span class="material-icons">payments</span>
+                                    Top Up Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Wallet Settings -->
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>Wallet Settings</h3>
+                            </div>
+                            <div class="settings-list">
+                                <!-- Auto Top-up -->
+                                <div class="setting-item">
+                                    <div class="setting-left">
+                                        <div class="setting-icon auto">
+                                            <span class="material-icons">autorenew</span>
+                                        </div>
+                                        <div>
+                                            <h4>Auto Top-up</h4>
+                                            <p>When balance is low</p>
+                                        </div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+
+                                <!-- Wallet PIN -->
+                                <button class="setting-item clickable">
+                                    <div class="setting-left">
+                                        <div class="setting-icon pin">
+                                            <span class="material-icons">password</span>
+                                        </div>
+                                        <div>
+                                            <h4>Wallet PIN</h4>
+                                            <p>Change security PIN</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-icons">chevron_right</span>
+                                </button>
+
+                                <!-- Terms & Conditions -->
+                                <button class="setting-item clickable">
+                                    <div class="setting-left">
+                                        <div class="setting-icon terms">
+                                            <span class="material-icons">description</span>
+                                        </div>
+                                        <div>
+                                            <h4>Terms & Conditions</h4>
+                                            <p>Read wallet policy</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-icons">open_in_new</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Google Reviews Card -->
+                        <div class="google-reviews-card">
+                            <div class="reviews-header">
+                                <div class="google-logo">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path
+                                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                            fill="#4285F4" />
+                                        <path
+                                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                            fill="#34A853" />
+                                        <path
+                                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                            fill="#FBBC05" />
+                                        <path
+                                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                            fill="#EA4335" />
+                                    </svg>
+                                    <span>Reviews</span>
+                                </div>
+                                <div class="rating-badge">
+                                    <span class="rating-number">4.9</span>
+                                    <div class="rating-stars">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-content">
+                                <p class="trust-text">Join 1,200+ happy customers who love Steamsbury!</p>
+                                <div class="google-summary">
+                                    <span class="material-icons">verified</span>
+                                    <span>Google Verified Business</span>
+                                </div>
+                                <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
+                                    target="_blank" class="btn btn-review">
+                                    <span class="material-icons">edit</span>
+                                    Write a Review
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Security Notice -->
+                        <div class="security-notice">
+                            <span class="material-icons">verified_user</span>
+                            <div>
+                                <h4>Secure Payments</h4>
+                                <p>Your wallet is protected by bank-grade 256-bit encryption.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html">
+                            <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                        </a>
+                        <p class="footer-text">
+                            Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                            togetherness.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="menu.html">Our Menu</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Visit Us</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <span class="material-icons">place</span>
+                                <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                            </li>
+                            <li>
+                                <span class="material-icons">email</span>
+                                <span>hello@steamsbury.com</span>
+                            </li>
+                            <li>
+                                <span class="material-icons">phone</span>
+                                <span>(555) 123-4567</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p class="footer-text">Stay updated with our latest events.</p>
+                        <form class="footer-newsletter-form">
+                            <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                            <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2023 Steamsbury. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script src="dashboard-auth.js?v=4"></script>
+
+    <script src="wallet.js"></script>
+    <script src="back-to-top.js"></script>
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

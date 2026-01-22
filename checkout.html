@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Steamsbury</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- LOGO IMAGE -->
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="event.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+                <a href="offers.html" class="mobile-nav-link">Offers</a>
+                <a href="event.html" class="mobile-nav-link">Events</a>
+                <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="checkout-container">
+
+        <div class="checkout-grid">
+
+            <!-- Left Side: Forms -->
+            <div class="form-section">
+                <h1 class="page-title">Secure Checkout</h1>
+
+                <form id="checkoutForm">
+
+                    <!-- 1. Customer Details -->
+                    <div class="form-card">
+                        <div class="form-header">
+                            <span class="step-num">1</span>
+                            <h3>Customer Information</h3>
+                        </div>
+                        <div class="form-body">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" id="fps" placeholder="e.g. John" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="e.g. Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="077 123 4567" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Order Type & Address -->
+                    <div class="form-card">
+                        <div class="form-header">
+                            <span class="step-num">2</span>
+                            <h3>Delivery Method</h3>
+                        </div>
+                        <div class="form-body">
+                            <div class="radio-toggle-group">
+                                <label class="radio-option selected">
+                                    <input type="radio" name="orderType" value="pickup" checked>
+                                    <span class="material-icons">storefront</span>
+                                    <span>Pick Up</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="orderType" value="delivery">
+                                    <span class="material-icons">local_shipping</span>
+                                    <span>Delivery</span>
+                                </label>
+                            </div>
+
+                            <div id="deliveryFields" style="display: none; margin-top: 20px;">
+                                <div class="form-group">
+                                    <label>Street Address</label>
+                                    <input type="text" placeholder="123 Coffee Ln" id="addrStreet">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        <input type="text" placeholder="Colombo" id="addrCity">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Postal Code</label>
+                                        <input type="text" placeholder="10100" id="addrZip">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Payment Method -->
+                    <div class="form-card">
+                        <div class="form-header">
+                            <span class="step-num">3</span>
+                            <h3>Payment Method</h3>
+                        </div>
+                        <div class="form-body">
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <span class="material-icons">credit_card</span>
+                                    <div>
+                                        <strong>Credit / Debit Card</strong>
+                                        <p>Visa, Mastercard, Amex</p>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="paypal">
+                                    <span class="material-icons">account_balance_wallet</span>
+                                    <div>
+                                        <strong>PayPal / Stripe</strong>
+                                        <p>Fast, secure online payment</p>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cod">
+                                    <span class="material-icons">payments</span>
+                                    <div>
+                                        <strong>Cash on Delivery</strong>
+                                        <p>Pay when you receive your order</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <!-- Right Side: Order Summary -->
+            <div class="summary-section">
+                <div class="order-summary-card">
+                    <h3 class="summary-card-title">Order Summary</h3>
+
+                    <div class="summary-items" id="summaryItemsList">
+                        <!-- Items injected here -->
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="cost-breakdown">
+                        <div class="cost-row">
+                            <span>Subtotal</span>
+                            <span id="summSubtotal">Rs 0</span>
+                        </div>
+                        <div class="cost-row">
+                            <span>Service/Tax</span>
+                            <span id="summTax">Rs 0</span>
+                        </div>
+                        <div class="cost-row" id="deliveryFeeRow" style="display:none">
+                            <span>Delivery Fee</span>
+                            <span id="summDelivery">Rs 350</span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="cost-row total">
+                        <span>Total To Pay</span>
+                        <span id="summTotal">Rs 0</span>
+                    </div>
+
+                    <div class="terms-check">
+                        <input type="checkbox" id="termsCheck" required form="checkoutForm">
+                        <label for="termsCheck">I agree to the Terms & Conditions and Privacy Policy.</label>
+                    </div>
+
+                    <button type="submit" form="checkoutForm" class="btn btn-primary btn-block btn-lg">
+                        Place Order
+                    </button>
+
+                    <div class="secure-badge">
+                        <span class="material-icons">lock</span>
+                        Secure SSL Encryption
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+
+</html>

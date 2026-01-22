@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard (Updated) - Steamsbury</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css?v=3">
+    <link rel="stylesheet" href="back-to-top.css">
+</head>
+
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="index.html">
+            <img src="./assets/navbarlogo.png" alt="Steamsbury" class="mobile-logo">
+        </a>
+        <button class="hamburger-btn" id="mobileMenuBtn">
+            <span class="material-icons">menu</span>
+        </button>
+    </header>
+
+    <!-- Expandable Sidebar Navigation -->
+    <div class="sidebar-navigation" id="sidebar">
+        <!-- Toggle Button -->
+        <button class="toggle-btn" id="toggleBtn">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <a href="index.html">
+                <img src="./DashboardAssets/sidebar-logo.png" alt="Steams Bury" class="sidebar-logo-img">
+            </a>
+        </div>
+
+        <!-- Navigation Section -->
+        <nav class="nav-section">
+            <div class="nav-title">MAIN</div>
+
+            <ul class="nav-list">
+                <li class="nav-item active" data-page="dashboard">
+                    <a href="dashboard.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="nav-text">Dashboard</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="menu-auth">
+                    <a href="menu-auth.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        <span class="nav-text">Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="wallet">
+                    <a href="wallet.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
+                        <span class="nav-text">Wallet</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="event-auth">
+                    <a href="event-auth.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">event</span>
+                        <span class="nav-text">Event</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="profile">
+                    <a href="dashboard.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="nav-text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Logout Section -->
+        <div class="logout-section">
+            <a href="index.html" class="nav-link-item">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard-wrapper">
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="dashboard.html" class="breadcrumb-link">Dashboard</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">My Profile</span>
+            </nav>
+
+            <h1 class="page-title">Dashboard</h1>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Sidebar -->
+                <!-- Sidebar removed (legacy) -->
+
+                <!-- Main Dashboard Content -->
+                <section class="dashboard-main">
+                    <!-- Welcome Banner -->
+                    <div class="welcome-banner">
+                        <div class="banner-content">
+                            <h2 class="banner-title">Good morning, Mahesh.</h2>
+                            <p class="banner-subtitle">You're just 50 Beans away from your next free Handcrafted Drink!
+                            </p>
+
+                            <div class="progress-section">
+                                <div class="progress-header">
+                                    <span class="progress-label">Gold Tier Status</span>
+                                    <span class="progress-value">450 / 500 Beans</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <p class="progress-info">Earn 2 Beans for every Rs.100 spent.</p>
+                            </div>
+                        </div>
+
+                        <div class="banner-actions">
+                            <button class="btn btn-scan">
+                                <span class="material-icons">qr_code_2</span>
+                                <span>Scan in Store</span>
+                            </button>
+                            <a href="wallet.html" class="btn btn-rewards"
+                                style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">View
+                                Rewards</a>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-icon material-icons">local_cafe</span>
+                            <p class="stat-label">Total Orders</p>
+                            <h3 class="stat-value">24</h3>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-icon material-icons">savings</span>
+                            <p class="stat-label">Saved this Year</p>
+                            <h3 class="stat-value">Rs.4500</h3>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-icon material-icons">star</span>
+                            <p class="stat-label">Favorite Item</p>
+                            <h3 class="stat-value">Caramel Macchiato</h3>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <div class="recent-orders">
+                        <div class="section-header">
+                            <h3 class="section-title">Recent Orders</h3>
+                            <a href="#" class="view-all-link">View All History</a>
+                        </div>
+
+                        <div class="orders-list">
+                            <!-- Order 1 -->
+                            <div class="order-item">
+                                <div class="order-indicator"></div>
+                                <img src="./DashboardAssets/Starbucks-caramel-macchiato-latte-9-of-14.webp"
+                                    alt="Caramel Macchiato" class="order-image">
+                                <div class="order-details">
+                                    <div class="order-header">
+                                        <h4 class="order-name">Caramel Macchiato</h4>
+                                        <span class="order-price">Rs.1200</span>
+                                    </div>
+                                    <p class="order-specs">Large • Oat Milk • Extra Shot</p>
+                                    <p class="order-info">Ordered Oct 24, 8:30 AM • Pickup at Downtown</p>
+                                </div>
+                                <button class="btn btn-reorder">Reorder</button>
+                            </div>
+
+                            <!-- Order 2 -->
+                            <div class="order-item">
+                                <div class="order-indicator"></div>
+                                <img src="./DashboardAssets/Everything-Bagel-Breakfast-Sandwich-6-scaled.jpg"
+                                    alt="Everything Bagel" class="order-image">
+                                <div class="order-details">
+                                    <div class="order-header">
+                                        <h4 class="order-name">Everything Bagel</h4>
+                                        <span class="order-price">Rs.800</span>
+                                    </div>
+                                    <p class="order-specs">Toasted • Cream Cheese</p>
+                                    <p class="order-info">Ordered Oct 20, 9:15 AM • Delivery</p>
+                                </div>
+                                <button class="btn btn-details">Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="personal-info">
+                        <h3 class="section-title">Personal Information</h3>
+
+                        <form class="info-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-input" value="Mahesh Alwis">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-input" value="maheshalwis@gmail.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-input" value="0765453773">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Date of Birth</label>
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-input" value="28/11/2005">
+                                        <span class="material-icons input-icon">calendar_today</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-cancel">Cancel</button>
+                                <button type="submit" class="btn btn-save">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html">
+                            <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                        </a>
+                        <p class="footer-text">
+                            Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                            togetherness.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="menu.html">Our Menu</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Visit Us</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <span class="material-icons">place</span>
+                                <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                            </li>
+                            <li>
+                                <span class="material-icons">email</span>
+                                <span>hello@steamsbury.com</span>
+                            </li>
+                            <li>
+                                <span class="material-icons">phone</span>
+                                <span>(555) 123-4567</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p class="footer-text">Stay updated with our latest events.</p>
+                        <form class="footer-newsletter-form">
+                            <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                            <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2023 Steamsbury. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="dashboard-auth.js?v=4"></script>
+    <script src="back-to-top.js"></script>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

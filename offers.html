@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - Steamsbury</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kurale:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="offers.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="offers.html" class="nav-link active">Offers</a>
+                <a href="event.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+                <a href="offers.html" class="mobile-nav-link active">Offers</a>
+                <a href="event.html" class="mobile-nav-link">Events</a>
+                <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-background"
+                    style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%), url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200&h=600&fit=crop');">
+                </div>
+                <div class="hero-content">
+                    <span class="hero-badge">Deal of the Month</span>
+                    <h1 class="hero-title">Autumn Warmth:<br> 10% Off When You Sign Up</h1>
+                    <p class="hero-description">
+                        Enjoy exclusive savings on coffee, pastries, and seasonal favorites. Sign up today and save
+                        instantly. Limited time offer!
+                    </p>
+                    <button class="btn-hero">
+                        <span>Order Now</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters & Header -->
+        <div class="filters-header">
+            <div class="filters-container">
+                <h2 class="section-title">Current Promotions</h2>
+                <!-- Filter Chips -->
+                <div class="filter-chips">
+                    <button class="chip active" data-filter="all">All Offers</button>
+                    <button class="chip" data-filter="limited">Limited Time</button>
+                    <button class="chip" data-filter="drinks">Drinks</button>
+                    <button class="chip" data-filter="loyalty">Loyalty Rewards</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offers Grid -->
+        <section class="offers-section">
+            <div class="offers-grid">
+                <!-- Offer Card 1 -->
+                <div class="offer-card" data-category="limited drinks">
+                    <div class="offer-image">
+                        <span class="offer-badge badge-daily">Daily Special</span>
+                        <div class="image-wrapper"
+                            style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">BOGO Espressos</h3>
+                        <p class="offer-description">
+                            Buy One Get One Free on all Espressos until 10 AM. Perfect for kickstarting your morning
+                            commute with a friend.
+                        </p>
+                        <div class="offer-footer">
+                            <span class="offer-expiry">
+                                <span class="material-symbols-outlined">schedule</span>
+                                Expires in 2 days
+                            </span>
+                            <button class="btn-link">
+                                Claim Code
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer Card 2 -->
+                <div class="offer-card" data-category="limited">
+                    <div class="offer-image">
+                        <span class="offer-badge badge-bundle">Bundle Deal</span>
+                        <div class="image-wrapper"
+                            style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Morning Glory Bundle</h3>
+                        <p class="offer-description">
+                            Get $2 Off any Breakfast Sandwich when you order a large coffee or tea. Fuel your day
+                            the right way.
+                        </p>
+                        <div class="offer-footer">
+                            <span class="offer-expiry">
+                                <span class="material-symbols-outlined">schedule</span>
+                                Valid until 11 AM
+                            </span>
+                            <button class="btn-link">
+                                View Details
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer Card 3 (Loyalty) -->
+                <div class="offer-card loyalty-card" data-category="loyalty">
+                    <div class="offer-image">
+                        <span class="offer-badge badge-members">
+                            <span class="material-symbols-outlined">stars</span>
+                            Members Only
+                        </span>
+                        <div class="image-wrapper"
+                            style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Birthday Treat</h3>
+                        <p class="offer-description">
+                            Celebrate your special day with us! Active loyalty members receive a free pastry of
+                            their choice during their birthday month.
+                        </p>
+                        <div class="offer-footer">
+                            <span class="offer-expiry loyalty-text">Login to claim</span>
+                            <button class="btn-signin">Sign In</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer Card 4 -->
+                <div class="offer-card" data-category="loyalty">
+                    <div class="offer-image">
+                        <div class="image-wrapper"
+                            style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Double Bean Points</h3>
+                        <p class="offer-description">
+                            Stock up your pantry! Earn 2x loyalty points on all whole bean bag purchases this
+                            weekend only.
+                        </p>
+                        <div class="offer-footer">
+                            <span class="offer-expiry">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                                Sat-Sun Only
+                            </span>
+                            <button class="btn-link">
+                                Shop Beans
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer Card 5 -->
+                <div class="offer-card" data-category="drinks">
+                    <div class="offer-image">
+                        <span class="offer-badge badge-eco">Eco Friendly</span>
+                        <div class="image-wrapper"
+                            style="background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">BYO Cup Discount</h3>
+                        <p class="offer-description">
+                            Save $0.50 on any prepared drink when you bring your own clean reusable cup. Good for
+                            your wallet, great for the planet.
+                        </p>
+                        <div class="offer-footer">
+                            <span class="offer-expiry">
+                                <span class="material-symbols-outlined">indeterminate_question_box</span>
+                                Always Active
+                            </span>
+                            <button class="btn-link">
+                                Learn More
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer Card 6 -->
+                <div class="offer-card" data-category="limited">
+                    <div class="offer-image">
+                        <div class="image-wrapper"
+                            style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Lunch Hour 15% Off</h3>
+                        <p class="offer-description">
+                            Take a break with us! Enjoy 15% off all food items between 12 PM and 2 PM on weekdays.
+                        </p>
+                        <div class="offer-footer">
+                            <span class="offer-expiry">
+                                <span class="material-symbols-outlined">schedule</span>
+                                Mon - Fri
+                            </span>
+                            <button class="btn-link">
+                                See Menu
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loyalty Section Banner -->
+        <section class="loyalty-banner">
+            <div class="loyalty-content">
+                <div class="loyalty-text">
+                    <div class="loyalty-header">
+                        <span class="material-symbols-outlined">loyalty</span>
+                        <span class="loyalty-subtitle">Inner Circle Rewards</span>
+                    </div>
+                    <h2 class="loyalty-title">
+                        Sip your way to <span class="highlight">free coffee.</span>
+                    </h2>
+                    <p class="loyalty-description">
+                        Join the Daily Grind Inner Circle today. Earn beans with every purchase, unlock exclusive
+                        member-only offers, and get a free drink just for signing up.
+                    </p>
+                    <div class="loyalty-features">
+                        <div class="feature-badge">
+                            <span class="material-symbols-outlined">check_circle</span>
+                            <span>Free Birthday Drink</span>
+                        </div>
+                        <div class="feature-badge">
+                            <span class="material-symbols-outlined">check_circle</span>
+                            <span>Order Ahead</span>
+                        </div>
+                        <div class="feature-badge">
+                            <span class="material-symbols-outlined">check_circle</span>
+                            <span>Exclusive Tasting Events</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="loyalty-cta">
+                    <a href="login.html" class="btn-loyalty">Join for Free</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-icon">
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <h2 class="newsletter-title">Never miss a brew-tiful deal</h2>
+                <p class="newsletter-description">
+                    Subscribe to our newsletter to get the latest promotions, seasonal menu updates, and coffee tips
+                    delivered straight to your inbox.
+                </p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                </form>
+                <p class="newsletter-privacy">
+                    We respect your privacy. Unsubscribe at any time.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="offers.js"></script>
+    <script src="back-to-top.js"></script>
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

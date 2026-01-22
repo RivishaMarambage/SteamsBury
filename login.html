@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login – Steamsbury</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="back-to-top.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-wrapper">
+
+            <!-- LEFT IMAGE -->
+            <div class="login-image">
+                <div class="overlay"></div>
+                <div class="image-content">
+                    <span class="material-icons icon">local_cafe</span>
+                    <h2>Morning brew, on us.</h2>
+                    <p>
+                        Join our rewards program today. Earn points for every purchase and
+                        get a free drink after just 5 visits.
+                    </p>
+                    <div class="badge">
+                        <span class="material-icons">verified</span>
+                        50 Bonus Points on Sign Up
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="form-wrapper">
+
+                <h1>Welcome Back</h1>
+                <p class="subtitle">Please enter your details to sign in.</p>
+
+                <!-- TABS -->
+                <div class="tabs">
+                    <button class="tab active" data-target="loginForm">Login</button>
+                    <button class="tab" data-target="signupForm">Sign Up</button>
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">email</span>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            Password
+                            <a href="#" class="forgot">Forgot Password?</a>
+                        </label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">lock</span>
+                            <input type="password" placeholder="Enter your password" required>
+                            <span class="material-icons toggle-password">visibility_off</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Sign In</button>
+                </form>
+
+                <!-- SIGN UP FORM -->
+                <form id="signupForm" class="auth-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">person</span>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">phone</span>
+                            <input type="tel" placeholder="+94 123 456 789" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nickname <span style="color: #88746B; font-size: 12px;">(Optional)</span></label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">badge</span>
+                            <input type="text" placeholder="Enter your nickname">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">cake</span>
+                            <input type="date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">email</span>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">lock</span>
+                            <input type="password" placeholder="Create a password" required>
+                            <span class="material-icons toggle-password">visibility_off</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span class="checkbox-text">I agree to the <a href="#" class="privacy-link">Privacy
+                                    Policy</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn">Create Account</button>
+
+                </form>
+
+                <!-- DIVIDER -->
+                <div class="divider">
+                    <span class="line"></span>
+                    <span class="text">OR CONTINUE WITH</span>
+                    <span class="line"></span>
+                </div>
+
+                <!-- SOCIAL -->
+                <div class="social">
+                    <button class="social-btn">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20">
+                        <span>Google</span>
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://www.svgrepo.com/show/511330/apple-173.svg" alt="Apple" width="20">
+                        <span>Apple</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+
+</html>

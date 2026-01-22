@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #EFE9E3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.login-wrapper {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 650px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT IMAGE */
+.login-image {
+    position: relative;
+    background: url('./assets/most-iconic-cafe-in-the.jpg') center/cover no-repeat;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.image-content {
+    position: relative;
+    z-index: 1;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #CF6D17;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.image-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.image-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badge {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffdcb5;
+}
+
+.badge .material-icons {
+    color: #CF6D17;
+}
+
+/* RIGHT FORM */
+.form-wrapper {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-wrapper h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 2.5rem;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding-bottom: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #999;
+    font-size: 1rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.tab:hover {
+    color: #333;
+}
+
+.tab.active {
+    color: #CF6D17;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #CF6D17;
+    border-radius: 3px 3px 0 0;
+}
+
+/* FORMS */
+.auth-form {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.auth-form.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot {
+    color: #CF6D17;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* Input Wrapper Styling */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: #999;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #CF6D17;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(207, 109, 23, 0.1);
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #CF6D17;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #CF6D17, #F58D37);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(207, 109, 23, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(207, 109, 23, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* CHECKBOX GROUP */
+.checkbox-group {
+    margin-top: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    min-width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #CF6D17;
+}
+
+.checkbox-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.privacy-link {
+    color: #CF6D17;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+/* DIVIDER */
+.divider {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.divider .line {
+    flex: 1;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.divider .text {
+    font-size: 0.8rem;
+    color: #999;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* SOCIAL */
+.social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.social-btn {
+    padding: 0.9rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    background: #f9f9f9;
+    border-color: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+.social-btn img {
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .login-wrapper {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .form-wrapper {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-wrapper {
+        border-radius: 16px;
+    }
+
+    .form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-wrapper h1 {
+        font-size: 1.75rem;
+    }
+
+    .tabs {
+        gap: 1rem;
+    }
+
+    .social {
+        grid-template-columns: 1fr;
+    }
+
+    .social-btn {
+        padding: 0.8rem;
+    }
+}

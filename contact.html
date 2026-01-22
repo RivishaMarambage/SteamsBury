@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Careers | Premium Coffee Co.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kurale:wght@400&display=swap">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+
+            <!-- LOGO IMAGE -->
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="event.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link active">Contact Us</a>
+
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+                <a href="offers.html" class="mobile-nav-link">Offers</a>
+                <a href="event.html" class="mobile-nav-link">Events</a>
+                <a href="contact.html" class="mobile-nav-link active">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Let's Connect</h1>
+            <p class="hero-description">
+                Whether you're looking for the perfect morning table or your next career milestone, we'd love to hear
+                from you. Welcome to our community.
+            </p>
+        </section>
+
+        <!-- Contact Grid Section -->
+        <section class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-card" id="contact-form">
+                <h3 class="form-title">Send a Message</h3>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-input" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <select class="form-select">
+                            <option>General Inquiry</option>
+                            <option selected>Job Opportunities / Careers</option>
+                            <option>Private Events</option>
+                            <option>Wholesale Partnerships</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Your Message</label>
+                        <textarea class="form-textarea" placeholder="Tell us more..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <!-- Info Cards -->
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <span class="material-symbols-outlined">coffee</span>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-title">Phone</h4>
+                            <p class="info-text">+94 740479838</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-title">Email</h4>
+                            <p class="info-text">steamsbury@gmail.com </p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-title">Our Roastery</h4>
+                            <p class="info-text">911, Electricity Board Road, Battaramulla<br>Pannipitiya Rd,
+                                Battaramulla</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="hours-card">
+                    <h4 class="hours-title">Opening Hours</h4>
+                    <div class="hours-list">
+                        <div class="hours-row">
+                            <span>Mon - Thu</span>
+                            <span class="hours-time">7:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="hours-row highlight">
+                            <span class="hours-special">
+                                <span class="material-symbols-outlined">celebration</span>
+                                Happy Hour (Fri)
+                            </span>
+                            <span class="hours-time">4:00 PM - 7:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Fri - Sat</span>
+                            <span class="hours-time">7:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Sunday</span>
+                            <span class="hours-time">8:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section class="careers-section">
+            <div class="careers-container">
+                <div class="careers-image">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=500&fit=crop"
+                        alt="Barista crafting latte art">
+                </div>
+                <div class="careers-content">
+                    <h2 class="careers-title">Brew Your Future<br>With Us</h2>
+                    <p class="careers-description">
+                        We don't just serve coffee; we cultivate community. We're looking for passionate individuals who
+                        believe that the craft is in the details and the joy is in the connection. From master roasters
+                        to front-of-house smiles, your journey starts here.
+                    </p>
+                    <a href="#contact-form" class="btn-apply">
+                        Apply Now
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map & Social Section -->
+        <section class="map-social-section">
+            <div class="map-social-container">
+                <div class="map-area">
+                    <iframe
+                        src="https://www.google.com/maps/place/Steamsbury+Tea+%26+Coffee+House+by+Santhiyagu/@6.9005507,79.9215272,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae2570006aabb6d:0x14590eb0b2ce876f!8m2!3d6.9005507!4d79.9215272!16s%2Fg%2F11ln1mcb9k?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="social-area">
+                    <h3 class="social-title">Stay Connected</h3>
+                    <p class="social-subtitle">Tag us in your morning rituals</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <h2 class="cta-title">Visit us for a cup, or join the family.</h2>
+            <div class="cta-buttons">
+                <button class="btn-directions">
+                    <span class="material-symbols-outlined">directions_car</span>
+                    Get Directions
+                </button>
+                <a href="#contact-form" class="btn-join">Apply to Join</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="contact.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+
+</html>

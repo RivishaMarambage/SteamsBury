@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu (Authenticated) - Steamsbury</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="custom-coffee.css">
+    <link rel="stylesheet" href="back-to-top.css">
+
+
+
+
+</head>
+
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="index.html">
+            <img src="./assets/navbarlogo.png" alt="Steamsbury" class="mobile-logo">
+        </a>
+        <button class="hamburger-btn" id="mobileMenuBtn">
+            <span class="material-icons">menu</span>
+        </button>
+    </header>
+
+    <!-- Expandable Sidebar Navigation -->
+
+    <div class="sidebar-navigation" id="sidebar">
+        <!-- Toggle Button -->
+        <button class="toggle-btn" id="toggleBtn">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="./DashboardAssets/sidebar-logo.png" alt="Steams Bury" class="sidebar-logo-img">
+        </div>
+
+        <!-- Navigation Section -->
+        <nav class="nav-section">
+            <div class="nav-title">MAIN</div>
+
+            <ul class="nav-list">
+                <li class="nav-item" data-page="dashboard">
+                    <a href="dashboard.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item active" data-page="menu-auth">
+                    <a href="menu-auth.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        <span class="nav-text">Menu</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="wallet">
+                    <a href="wallet.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
+                        <span class="nav-text">Wallet</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="event-auth">
+                    <a href="event-auth.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">event</span>
+                        <span class="nav-text">Event</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="profile">
+                    <a href="dashboard.html" class="nav-link-item">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="nav-text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Logout Section -->
+        <div class="logout-section">
+            <a href="index.html" class="nav-link-item">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard-wrapper">
+
+        <!-- Hero Section -->
+        <section class="menu-hero">
+            <div class="hero-content-wrapper">
+                <div class="hero-text">
+                    <nav class="breadcrumb" style="margin-bottom: 20px;">
+                        <a href="dashboard.html" class="breadcrumb-link"
+                            style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem;">Dashboard</a>
+                        <span class="breadcrumb-separator"
+                            style="margin: 0 8px; color: rgba(255, 255, 255, 0.5);">/</span>
+                        <span class="breadcrumb-current"
+                            style="color: #FFFFFF; font-weight: 500; font-size: 0.9rem;">Menu</span>
+                    </nav>
+                    <span class="hero-label">Our Menu</span>
+                    <h1 class="hero-title">Crafted for comfort,<br>brewed for you.</h1>
+                    <p class="hero-description">
+                        Explore our artisanal coffee blends, freshly baked pastries, and refreshing cold brews. Item of
+                        the
+                        day:
+                        <span class="highlight">Salted Caramel Macchiato</span>.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Order Now</button>
+                        <button class="btn btn-secondary">View Nutritional Info</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./MenuAssets/ceylon-tea-collection.jpg" alt="Coffee">
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Tabs -->
+        <section class="filter-tabs">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab active" data-filter="all">
+                        <span class="material-icons">menu_book</span>
+                        All
+                    </button>
+                    <button class="tab" data-filter="hot-coffee">
+                        <span class="material-icons">local_fire_department</span>
+                        Hot Coffee
+                    </button>
+                    <button class="tab" data-filter="cold-brews">
+                        <span class="material-icons">ac_unit</span>
+                        Cold Brews
+                    </button>
+                    <button class="tab" data-filter="teas">
+                        <span class="material-icons">emoji_food_beverage</span>
+                        Teas
+                    </button>
+                    <button class="tab" data-filter="bakery">
+                        <span class="material-icons">bakery_dining</span>
+                        Bakery
+                    </button>
+                    <button class="tab tab-custom" data-filter="custom-coffee">
+                        <span class="material-icons">auto_awesome</span>
+                        Make Your Own Coffee
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Make Your Own Coffee Section -->
+        <section class="menu-section" data-category="custom-coffee" style="display:none;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="material-icons">auto_awesome</span>
+                    <h2>Make Your Own Coffee</h2>
+                </div>
+
+                <div class="custom-coffee-builder">
+                    <div class="builder-card">
+                        <div class="builder-header">
+                            <h3>Build Your Perfect Cup</h3>
+                            <p>Start with a base and customize with your favorite add-ons</p>
+                        </div>
+
+                        <div class="builder-content">
+                            <!-- Base Selection -->
+                            <div class="builder-section">
+                                <h4 class="builder-section-title">
+                                    <span class="material-icons">local_cafe</span>
+                                    Choose Your Base
+                                </h4>
+                                <div class="base-options">
+                                    <label class="base-option">
+                                        <input type="radio" name="coffeeBase" value="Espresso" data-price="400" checked>
+                                        <div class="option-card">
+                                            <span class="option-name">Espresso Shot</span>
+                                            <span class="option-price">Rs 400</span>
+                                        </div>
+                                    </label>
+                                    <label class="base-option">
+                                        <input type="radio" name="coffeeBase" value="Double Espresso" data-price="600">
+                                        <div class="option-card">
+                                            <span class="option-name">Double Espresso</span>
+                                            <span class="option-price">Rs 600</span>
+                                        </div>
+                                    </label>
+                                    <label class="base-option">
+                                        <input type="radio" name="coffeeBase" value="Cold Brew" data-price="500">
+                                        <div class="option-card">
+                                            <span class="option-name">Cold Brew</span>
+                                            <span class="option-price">Rs 500</span>
+                                        </div>
+                                    </label>
+                                    <label class="base-option">
+                                        <input type="radio" name="coffeeBase" value="Americano" data-price="450">
+                                        <div class="option-card">
+                                            <span class="option-name">Americano</span>
+                                            <span class="option-price">Rs 450</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="builder-section">
+                                <h4 class="builder-section-title">
+                                    <span class="material-icons">tune</span>
+                                    Customize Your Drink
+                                </h4>
+                                <div class="customization-grid">
+                                    <!-- Milk Options -->
+                                    <div class="custom-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Whole Milk" data-price="100">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Whole Milk</span>
+                                            <span class="addon-price">+Rs 100</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Oat Milk" data-price="150">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Oat Milk</span>
+                                            <span class="addon-price">+Rs 150</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Almond Milk" data-price="150">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Almond Milk</span>
+                                            <span class="addon-price">+Rs 150</span>
+                                        </label>
+                                    </div>
+
+                                    <!-- Syrups -->
+                                    <div class="custom-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Vanilla Syrup" data-price="100">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Vanilla Syrup</span>
+                                            <span class="addon-price">+Rs 100</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Caramel Syrup" data-price="100">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Caramel Syrup</span>
+                                            <span class="addon-price">+Rs 100</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Hazelnut Syrup" data-price="100">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Hazelnut Syrup</span>
+                                            <span class="addon-price">+Rs 100</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Mocha Syrup" data-price="100">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Mocha Syrup</span>
+                                            <span class="addon-price">+Rs 100</span>
+                                        </label>
+                                    </div>
+
+                                    <!-- Extras -->
+                                    <div class="custom-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Extra Shot" data-price="200">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Extra Shot</span>
+                                            <span class="addon-price">+Rs 200</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Whipped Cream" data-price="100">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Whipped Cream</span>
+                                            <span class="addon-price">+Rs 100</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Cinnamon" data-price="50">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Cinnamon</span>
+                                            <span class="addon-price">+Rs 50</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" data-addon="Ice" data-price="0">
+                                            <span class="checkmark"></span>
+                                            <span class="addon-name">Ice</span>
+                                            <span class="addon-price">Free</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price Summary -->
+                            <div class="builder-summary">
+                                <div class="summary-content">
+                                    <span class="summary-label">Your Custom Coffee</span>
+                                    <span class="summary-price" id="customCoffeePrice">Rs 400</span>
+                                </div>
+                                <button class="btn-add-custom" id="addCustomCoffeeBtn">
+                                    <span class="material-icons">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Coffee Section -->
+        <section class="menu-section" data-category="hot-coffee">
+            <div class="container">
+                <div class="section-header">
+                    <span class="material-icons">local_fire_department</span>
+                    <h2>Hot Coffee Classics</h2>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Classic Espresso -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Classic Espresso.png" alt="Classic Espresso">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                            <span class="badge">V</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Classic Espresso</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Rich, intense, and full-bodied single shot made from our signature
+                                dark
+                                roast</p>
+                            <span class="calories">5kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Cappuccino -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Cappuccino.png" alt="Cappuccino">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                            <span class="badge">GF</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Cappuccino</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Espresso combined with equal parts steamed milk and milk foam, dusted
+                            </p>
+                            <span class="calories">120kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Caffè Latte -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/cafelatte.jpg" alt="Caffè Latte">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Caffè Latte</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">A shot of espresso in steamed milk with a light layer of foam.</p>
+                            <span class="calories">190kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Americano -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Americano.jpg" alt="Americano">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                            <span class="badge">V</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Americano</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Espresso shots topped with hot water creating a light layer of crema
+                            </p>
+                            <span class="calories">5kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cold Brews Section -->
+        <section class="menu-section" data-category="cold-brews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="material-icons">ac_unit</span>
+                    <h2>Cold Brews & Refreshers</h2>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Iced Caramel Macchiato -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Iced Caramel Macchiato.jpg" alt="Iced Caramel Macchiato">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Iced Caramel Macchiato</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Espresso combined with vanilla-flavored syrup, milk and caramel
+                                drizzle
+                                over ice.</p>
+                            <span class="calories">250kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Nitro Cold Brew -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Nitro Cold Brew.jpg" alt="Nitro Cold Brew">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                            <span class="badge">V</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Nitro Brew</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Our signature Cold Brew infused with nitrogen for a creamy, sweet
+                                flavor.
+                            </p>
+                            <span class="calories">5kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Iced Matcha Latte -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Iced Matcha Latte.jpg" alt="Iced Matcha Latte">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Iced Matcha Latte</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Smooth and creamy matcha sweetened just right and served</p>
+                            <span class="calories">200kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Iced Matcha Latte 2 -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Cold Brew Green Tea.jpg" alt="Iced Matcha Latte">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Cold Brew Green Tea</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Smooth and creamy matcha sweetened just right and served</p>
+                            <span class="calories">200kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bakery Section -->
+        <section class="menu-section" data-category="bakery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="material-icons">bakery_dining</span>
+                    <h2>Fresh Bakery</h2>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Butter Croissant -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Butter Croissant.jpg" alt="Butter Croissant">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Croissant</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Flaky, golden-brown pastry made with real butter. Baked fresh daily.
+                            </p>
+                            <span class="calories">260kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Chocolate Muffin -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Chocolate-Muffins-16.webp" alt="Chocolate Muffin">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Chocolate Muffin</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Rich chocolate muffin loaded with chocolate chips and a tender crumb.
+                            </p>
+                            <span class="calories">380kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Chocolate Muffin 2 -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Garlic bread.jpg" alt="Chocolate Muffin">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Garlic bread</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Rich chocolate muffin loaded with chocolate chips and a tender crumb.
+                            </p>
+                            <span class="calories">380kcal</span>
+                        </div>
+                    </div>
+
+                    <!-- Everything Bagel -->
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="./MenuAssets/Everything-Bagel-Breakfast-Sandwich-6-scaled.jpg"
+                                alt="Everything Bagel">
+                            <button class="btn-add"><span class="material-icons">add</span></button>
+                            <span class="badge">V</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Everything Bagel</h3>
+                                <span class="price">Rs 800</span>
+                            </div>
+                            <p class="description">Toasted bagel topped with sesame, poppy seeds, onion, and garlic.</p>
+                            <span class="calories">280kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html">
+                            <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                        </a>
+                        <p class="footer-text">
+                            Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                            togetherness.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="menu.html">Our Menu</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Visit Us</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <span class="material-icons">place</span>
+                                <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                            </li>
+                            <li>
+                                <span class="material-icons">email</span>
+                                <span>hello@steamsbury.com</span>
+                            </li>
+                            <li>
+                                <span class="material-icons">phone</span>
+                                <span>(555) 123-4567</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p class="footer-text">Stay updated with our latest events.</p>
+                        <form class="footer-newsletter-form">
+                            <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                            <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2023 Steamsbury. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Add-on Modal -->
+    <div class="modal-overlay" id="addOnModal">
+        <div class="modal-container">
+            <button class="modal-close"><span class="material-icons">close</span></button>
+            <div class="modal-header-image">
+                <img src="" alt="Product" id="modalImage">
+            </div>
+            <div class="modal-body">
+                <span class="modal-category" id="modalCategory">Category</span>
+                <h3 class="modal-title" id="modalTitle">Product Title</h3>
+                <p class="modal-description" id="modalDescription">Product description goes here.</p>
+
+                <div class="modal-addons">
+                    <h4>Add Ons <span class="optional">(Optional)</span></h4>
+                    <div class="addons-list" id="addOnsList">
+                        <!-- Add-ons injected via JS -->
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qtyMinus"><span class="material-icons">remove</span></button>
+                        <span class="qty-value" id="qtyValue">1</span>
+                        <button class="qty-btn" id="qtyPlus"><span class="material-icons">add</span></button>
+                    </div>
+                    <button class="btn btn-primary btn-add-to-cart" id="addToCartBtn">
+                        Add to Cart - Rs <span id="totalPrice">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard-auth.js"></script>
+    <script src="menu.js"></script>
+    <script src="back-to-top.js"></script>
+
+    <!-- Floating Cart Button -->
+    <a href="cart.html" class="cart-float">
+        <span class="material-icons">shopping_cart</span>
+        <span class="cart-count" id="cart-count-badge">0</span>
+    </a>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

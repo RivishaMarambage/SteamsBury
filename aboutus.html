@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Steamsbury Story</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kurale:wght@400&display=swap">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+
+            <!--  LOGO IMAGE  -->
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link active">About Us</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="event.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link active">About Us</a>
+                <a href="offers.html" class="mobile-nav-link">Offers</a>
+                <a href="event.html" class="mobile-nav-link">Events</a>
+                <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-background"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=600&fit=crop');">
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">More Than Just Coffee</h1>
+                    <p class="hero-description">
+                        Discover the artisan roots and community heart behind Steamsbury's premium roasts.
+                        A haven for coffee lovers and dreamers alike.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-hero-primary">Visit Us Today</a>
+                        <a href="menu.html" class="btn-hero-secondary">Our Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="story-section">
+            <div class="story-container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <span class="story-badge">Since 2012</span>
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="story-description">
+                            From a single small roaster in a dusty garage to a beloved community hub, our journey has
+                            been fueled by a relentless passion for the perfect cup. We believe that coffee is more than
+                            a beverage; it's a catalyst for connection.
+                        </p>
+                    </div>
+                    <div class="story-images">
+                        <div class="story-image-item">
+                            <div class="story-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop');">
+                            </div>
+                            <p class="story-image-label">The Early Days</p>
+                        </div>
+                        <div class="story-image-item">
+                            <div class="story-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop');">
+                            </div>
+                            <p class="story-image-label">Sourcing Roots</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-hero-image"
+                    style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&h=800&fit=crop');">
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="values-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Values</h2>
+                    <p class="section-description">The principles that guide every roast and every pour we make.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <span class="material-symbols-outlined">verified</span>
+                        </div>
+                        <h3 class="value-title">Quality First</h3>
+                        <p class="value-description">We never compromise on the roast. Each batch is micro-roasted to
+                            perfection, ensuring the richest flavor profile possible.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <h3 class="value-title">Ethical Sourcing</h3>
+                        <p class="value-description">Direct trade relationships and fair wages for farmers are at the
+                            core of our supply chain. Respecting the seed to the cup.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <span class="material-symbols-outlined">groups</span>
+                        </div>
+                        <h3 class="value-title">Community Space</h3>
+                        <p class="value-description">Creating a warm 'third space' for everyone to connect, work, or
+                            simply breathe in the aroma of fresh beans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sensory Science Section -->
+        <section class="sensory-section">
+            <div class="sensory-container">
+                <div class="sensory-gallery">
+                    <div class="gallery-column">
+                        <div class="gallery-image tall"
+                            style="background-image: url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=500&fit=crop');">
+                        </div>
+                        <div class="gallery-image short"
+                            style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=300&fit=crop');">
+                        </div>
+                    </div>
+                    <div class="gallery-column offset">
+                        <div class="gallery-image short"
+                            style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300&fit=crop');">
+                        </div>
+                        <div class="gallery-image tall"
+                            style="background-image: url('https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=400&h=500&fit=crop');">
+                        </div>
+                    </div>
+                </div>
+                <div class="sensory-content">
+                    <h2 class="section-title">Sensory Science</h2>
+                    <p class="sensory-description">
+                        Roasting is where chemistry meets art. Our roast masters monitor the temperature and timing of
+                        every batch to highlight the unique terroir of the beans, from the citrus notes of Ethiopia to
+                        the chocolate undertones of Brazil.
+                    </p>
+                    <ul class="sensory-list">
+                        <li class="sensory-item">
+                            <span class="material-symbols-outlined">check_circle</span>
+                            <span>Light Roasts: Vibrant, high acidity, floral</span>
+                        </li>
+                        <li class="sensory-item">
+                            <span class="material-symbols-outlined">check_circle</span>
+                            <span>Medium Roasts: Balanced, caramel notes</span>
+                        </li>
+                        <li class="sensory-item">
+                            <span class="material-symbols-outlined">check_circle</span>
+                            <span>Dark Roasts: Bold, smoky, full-bodied</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="team-container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet the Team</h2>
+                    <p class="section-description">The passionate experts behind your daily cup.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop');">
+                        </div>
+                        <h4 class="team-name">Marcus Chen</h4>
+                        <p class="team-role">Head Roaster</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop');">
+                        </div>
+                        <h4 class="team-name">Sarah Jenkins</h4>
+                        <p class="team-role">Lead Barista</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop');">
+                        </div>
+                        <h4 class="team-name">David Steams</h4>
+                        <p class="team-role">Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop');">
+                        </div>
+                        <h4 class="team-name">Elena Rossi</h4>
+                        <p class="team-role">Community Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="masonry-grid">
+                    <img class="gallery-img"
+                        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=300&fit=crop"
+                        alt="People talking in cafe">
+                    <img class="gallery-img"
+                        src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&h=500&fit=crop"
+                        alt="Person working on laptop">
+                    <img class="gallery-img"
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop"
+                        alt="Coffee cups">
+                    <img class="gallery-img"
+                        src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop"
+                        alt="Pastries">
+                    <img class="gallery-img"
+                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop"
+                        alt="Latte art">
+                    <img class="gallery-img"
+                        src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=500&fit=crop"
+                        alt="Cafe exterior">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Experience Steamsbury Today</h2>
+                    <p class="cta-description">
+                        Whether you're looking for your morning jolt or a peaceful afternoon retreat, we have a seat
+                        waiting for you.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn-cta-primary">Find a Location</button>
+                        <button class="btn-cta-secondary">Order Online</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="aboutus.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+
+</html>

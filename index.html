@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steamsbury - Premium Coffee Experience</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kurale:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+
+            <!--  LOGO IMAGE  -->
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="event.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link active">Home</a>
+
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+                <a href="offers.html" class="mobile-nav-link">Offers</a>
+                <a href="event.html" class="mobile-nav-link">Events</a>
+                <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- HERO BACKGROUND VIDEO  -->
+        <video src="./assets/coffee.mp4" class="hero-bg" autoplay muted loop playsinline></video>
+
+
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <span class="hero-badge">Est. 2023 • Premium Roastery</span>
+            <h1 class="hero-title">
+                Brewing Moments,<br>
+                <span class="hero-accent">One Cup at a Time</span>
+            </h1>
+            <p class="hero-description">
+                Experience the art of coffee in the heart of the city. We source the finest beans to bring you a daily
+                ritual worth savoring.
+            </p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary">
+                    View Our Menu
+                    <span>🍴</span>
+                </a>
+                <a href="login.html#signup" class="btn btn-membership">
+                    Become a Member
+                    <span class="material-icons">stars</span>
+                </a>
+                <a href="offers.html" class="btn btn-secondary">
+                    View Offers
+                    <span class="material-icons">calendar_today</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-info-cards">
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">location_on</span>
+                </div>
+                <div class="info-text">
+                    <span class="info-label">Visit Us</span>
+                    <span class="info-value">911, Pannipitiya road, Battaramulla</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">schedule</span>
+                </div>
+                <div class="info-text">
+                    <span class="info-label">Opening Hours</span>
+                    <span class="info-value">Mon - Sun: 8:00 AM - 10:00 PM</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">verified</span>
+                </div>
+                <div class="info-text">
+                    <span class="info-label">Quality Promise</span>
+                    <span class="info-value">100% Fair Trade Organic Beans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-header">
+                        <span class="section-line"></span>
+                        <h3 class="section-label">Our Story</h3>
+                    </div>
+                    <h2 class="section-title">
+                        Welcome to<br>
+                        <span class="title-accent">Steamsbury</span>
+                    </h2>
+                    <p class="about-text">
+                        Steamsbury Tea and Coffee House by Santhiyagu blends tradition and comfort in a cozy space.
+                        Enjoy authentic Ceylon teas, premium coffee, refreshing mocktails, lemonades, and floral
+                        infusions, crafted for every taste.
+                    </p>
+                    <p class="about-text">
+                        Relax indoors or outdoors, savor diverse menu options from breakfast to burgers, sandwiches, and
+                        pastas. With welcoming staff and comfortable spaces, Steamsbury is a true home for tea and
+                        coffee lovers.
+                    </p>
+
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <span class="material-icons">coffee</span>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Artisan Roasts</h4>
+                                <p>Small batch roasted daily for peak flavor.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <span class="material-icons">wifi</span>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Cozy Workspace</h4>
+                                <p>Free high-speed WiFi and plenty of outlets.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#story" class="link-arrow">
+                        Read Our Full Story
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="about-image">
+                    <!-- ABOUT SECTION IMAGE -->
+                    <img src="./assets/most-iconic-cafe-in-the.jpg" alt="Coffee preparation">
+
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+            </div>
+            <p>"A cozy spot with tasty drinks, food, and fun for everyone."</p>
+        </div>
+    </section>
+
+    <!-- Make Your Own Coffee Promo Section -->
+    <section class="custom-coffee-promo">
+        <div class="container">
+            <div class="promo-content">
+                <div class="promo-badge">
+                    <span class="material-icons">auto_awesome</span>
+                    NEW FEATURE
+                </div>
+                <h2 class="promo-title">
+                    Create Your
+                    <span class="title-highlight">Perfect Cup</span>
+                </h2>
+                <p class="promo-description">
+                    Unleash your inner barista! Choose your base, customize with premium add-ons, and craft a coffee
+                    that's uniquely yours. From syrups to milk alternatives, every detail is in your hands.
+                </p>
+                <div class="promo-features">
+                    <div class="promo-feature">
+                        <span class="material-icons">local_cafe</span>
+                        <span>4 Coffee Bases</span>
+                    </div>
+                    <div class="promo-feature">
+                        <span class="material-icons">tune</span>
+                        <span>12+ Add-ons</span>
+                    </div>
+                    <div class="promo-feature">
+                        <span class="material-icons">attach_money</span>
+                        <span>Start from Rs 400</span>
+                    </div>
+                </div>
+                <a href="menu.html#custom-coffee" class="btn-promo">
+                    <span>Start Building Now</span>
+                    <span class="material-icons">arrow_forward</span>
+                </a>
+            </div>
+            <div class="promo-visual">
+                <div class="coffee-circle">
+                    <span class="material-icons coffee-icon">coffee</span>
+                </div>
+                <div class="floating-badge badge-1">
+                    <span class="material-icons">add</span>
+                    Vanilla
+                </div>
+                <div class="floating-badge badge-2">
+                    <span class="material-icons">add</span>
+                    Oat Milk
+                </div>
+                <div class="floating-badge badge-3">
+                    <span class="material-icons">add</span>
+                    Extra Shot
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-content">
+            <span class="material-icons quote-icon">format_quote</span>
+            <h2 class="quote-text">
+                Coffee is a language in itself.<br>
+                <span class="quote-accent">We speak it fluently.</span>
+            </h2>
+            <div class="quote-divider">
+                <span class="divider-line"></span>
+                <span class="quote-year">Since 2023</span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <div class="section-intro">
+                <div class="intro-text">
+                    <h2 class="section-title">Highlights & Favorites</h2>
+                    <p class="section-description">
+                        Explore our community favorites, seasonal delights, and upcoming events. Handpicked for you.
+                    </p>
+                </div>
+                <a href="menu.html" class="btn-link">
+                    View Full Menu
+                    <span class="material-icons">restaurant</span>
+                </a>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <!-- PRODUCT IMAGE 1 (House Blend Coffee) -->
+                        <img src="./assets/houseblend.jpg" alt="House Blend">
+
+                        <div class="card-badge best-seller">
+                            <span class="material-icons">star</span>
+                            Best Seller
+                        </div>
+                        <div class="card-price">Rs 800</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">House Blend</h3>
+                        <p class="card-description">
+                            Taste our customer favorite blends, from our signature dark roast to our creamy caramel
+                            macchiato.
+                        </p>
+                        <div class="card-rating">
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star_half</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <!-- PRODUCT IMAGE 2 (Pumpkin Spice Latte) -->
+                        <img src="./assets/pumkinglate.png" alt="Pumpkin Spice Latte">
+
+                        <div class="card-badge limited">
+                            <span class="material-icons">eco</span>
+                            Limited Time
+                        </div>
+                        <div class="card-price">Rs 800</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pumpkin Spice Latte</h3>
+                        <p class="card-description">
+                            Embrace the season with our pumpkin spice latte and maple pecan pastries. Warm spices for
+                            cool days.
+                        </p>
+                        <div class="card-rating">
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <!-- PRODUCT IMAGE 3 (Acoustic Nights Event) -->
+                        <img src="./assets/cozy-dining.jpg" alt="Acoustic Nights">
+
+                        <div class="card-badge event">
+                            <span class="material-icons">event</span>
+                            This Friday
+                        </div>
+                        <div class="card-price free">Free Entry</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Acoustic Nights</h3>
+                        <p class="card-description">
+                            Join us for live acoustic music sessions every Friday evening. Good vibes, great coffee, and
+                            local talent.
+                        </p>
+                        <div class="card-footer">
+                            <div class="event-time">
+                                <span class="material-icons">schedule</span>
+                                7:00 PM - 10:00 PM
+                            </div>
+                            <button class="btn-small">RSVP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Join the Coffee Club</h2>
+                <p>Subscribe for exclusive offers, brewing tips, and 10% off your first order.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="email-input">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gift Card Section -->
+    <section class="gift-card-section">
+        <div class="gift-hero">
+            <!-- GIFT CARD HERO IMAGE -->
+            <img src="./assets/giftcard.jpg" alt="Gift card">
+
+            <div class="gift-hero-overlay">
+                <h2>Share the Warmth</h2>
+                <p>Send an instant e-gift card to friends and family. The perfect way to say thank you, congratulations,
+                    or just because.</p>
+            </div>
+        </div>
+
+        <div class="gift-card-content">
+            <div class="voucher-options">
+                <h3 class="section-subtitle">Select Voucher Value</h3>
+
+                <div class="voucher-grid">
+                    <label class="voucher-card">
+                        <input type="radio" name="voucher">
+                        <div class="voucher-content">
+                            <div class="voucher-header">
+                                <div class="voucher-icon premium">
+                                    <span class="material-icons">workspace_premium</span>
+                                </div>
+                                <span class="material-icons check-icon">check_circle</span>
+                            </div>
+                            <h4>Ultimate Coffee Lover</h4>
+                            <div class="voucher-price">Rs. 50,000</div>
+                            <p>Perfect for the daily regular.</p>
+                        </div>
+                    </label>
+
+                    <label class="voucher-card selected">
+                        <input type="radio" name="voucher" checked>
+                        <div class="voucher-content">
+                            <div class="voucher-header">
+                                <div class="voucher-icon">
+                                    <span class="material-icons">bakery_dining</span>
+                                </div>
+                                <span class="material-icons check-icon">check_circle</span>
+                            </div>
+                            <h4>Coffee & Pastry Date</h4>
+                            <div class="voucher-price">Rs. 10,000</div>
+                            <p>A sweet treat for two.</p>
+                        </div>
+                    </label>
+
+                    <label class="voucher-card">
+                        <input type="radio" name="voucher">
+                        <div class="voucher-content">
+                            <div class="voucher-header">
+                                <div class="voucher-icon">
+                                    <span class="material-icons">local_cafe</span>
+                                </div>
+                                <span class="material-icons check-icon">check_circle</span>
+                            </div>
+                            <h4>Morning Pick-me-up</h4>
+                            <div class="voucher-price">Rs. 5,000</div>
+                            <p>Standard latte or cappuccino.</p>
+                        </div>
+                    </label>
+
+                    <label class="voucher-card">
+                        <input type="radio" name="voucher">
+                        <div class="voucher-content">
+                            <div class="voucher-header">
+                                <div class="voucher-icon">
+                                    <span class="material-icons">cookie</span>
+                                </div>
+                                <span class="material-icons check-icon">check_circle</span>
+                            </div>
+                            <h4>A Little Treat</h4>
+                            <div class="voucher-price">Rs. 3,000</div>
+                            <p>Small brewed coffee or cookie.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <div class="summary-card">
+                    <div class="summary-header">
+                        <h3>Order Summary</h3>
+                    </div>
+                    <div class="summary-body">
+                        <div class="summary-item">
+                            <div class="summary-image">
+                                <span class="material-icons">bakery_dining</span>
+                            </div>
+
+                            <div class="summary-details">
+                                <h4>Coffee & Pastry Date</h4>
+                                <p>E-Gift Voucher</p>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="quantity-control">
+                            <span>Quantity</span>
+                            <div class="quantity-buttons">
+                                <button class="qty-btn" id="qty-minus">
+                                    <span class="material-icons">remove</span>
+                                </button>
+                                <span class="qty-val">1</span>
+                                <button class="qty-btn" id="qty-plus">
+                                    <span class="material-icons">add</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="price-breakdown">
+                            <div class="price-row">
+                                <span>Subtotal</span>
+                                <span>Rs. 10,000</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Processing Fee</span>
+                                <span>Rs. 0</span>
+                            </div>
+                        </div>
+
+                        <div class="divider-bold"></div>
+
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span class="total-price">Rs. 10,000</span>
+                        </div>
+
+                        <a href="login.html" class="btn btn-primary btn-full">
+                            Add to Cart
+                            <span class="material-icons">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2 class="section-title">Fresh Brews in Your Inbox</h2>
+            <p class="section-description">Stay updated with our latest offers, recipes, and coffee stories.</p>
+            <form class="newsletter-form">
+                <input type="email" class="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="#" class="whatsapp-float">
+        <img src="./assets/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Steamsbury</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <script src="responsive-nav.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- LOGO IMAGE -->
+            <a href="index.html">
+                <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="logo">
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="event.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-signin">Sign In</a>
+                <a href="login.html#signup" class="btn-signup">Sign Up</a>
+                <button class="hamburger" id="mobileMenuBtn">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html">
+                    <img src="./assets/navbarlogo.png" alt="Steamsbury Logo" class="mobile-logo">
+                </a>
+                <button class="close-menu" id="closeMenuBtn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="menu.html" class="mobile-nav-link">Menu</a>
+                <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+                <a href="offers.html" class="mobile-nav-link">Offers</a>
+                <a href="event.html" class="mobile-nav-link">Events</a>
+                <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">camera_alt</span></a>
+                    <a href="#" class="mobile-social-icon"><span class="material-icons">alternate_email</span></a>
+                </div>
+                <a href="login.html" class="btn-signin">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="cart-container">
+        <h1 class="page-title">Shopping Cart</h1>
+
+        <div class="cart-grid">
+            <!-- Cart Items List -->
+            <div class="cart-items-section">
+                <div id="cartItemsList">
+                    <!-- Items injected via JS -->
+                    <div class="empty-cart-state" id="emptyCartState">
+                        <span class="material-icons icon-large">shopping_cart_checkout</span>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added anything yet.</p>
+                        <a href="menu.html" class="btn btn-primary">Start Ordering</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary Sidebar -->
+            <div class="cart-summary-section">
+                <div class="summary-card">
+                    <h3 class="summary-title">Summary</h3>
+
+                    <!-- Redeem Points Section -->
+                    <div class="points-section">
+                        <label for="pointsInput" class="points-label">
+                            <span class="material-icons">stars</span>
+                            Redeem Points
+                        </label>
+                        <div class="points-input-group">
+                            <input type="number" id="pointsInput" placeholder="Enter points" min="0" max="10000">
+                            <button id="applyPointsBtn" class="btn-apply-points">Apply</button>
+                        </div>
+                        <p class="points-info" id="pointsInfo">1 point = Rs 1 discount</p>
+                        <p class="points-success" id="pointsSuccess" style="display:none;"></p>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotalPrice">Rs 0</span>
+                    </div>
+                    <div class="summary-row" id="pointsDiscountRow" style="display:none;">
+                        <span class="discount-text">
+                            <span class="material-icons">loyalty</span>
+                            Points Discount
+                        </span>
+                        <span class="discount-amount" id="pointsDiscount">- Rs 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Taxes & Fees</span>
+                        <span>Calculated at checkout</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="summary-row total">
+                        <span>Total (Est.)</span>
+                        <span id="totalPrice">Rs 0</span>
+                    </div>
+
+                    <a href="checkout.html" class="btn btn-primary btn-block" id="checkoutBtn">
+                        Proceed to Checkout
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+
+                    <a href="menu.html" class="btn-link-center">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="./assets/navbarlogo.png" alt="Steamsbury" class="footer-logo">
+                    </a>
+                    <p class="footer-text">
+                        Crafting more than just coffee; we're brewing a community. Join us in our journey of taste and
+                        togetherness.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-icons">place</span>
+                            <span>911, Pannipitiya road<br>Battaramulla, Sri Lanka</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">email</span>
+                            <span>hello@steamsbury.com</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">phone</span>
+                            <span>(555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Stay updated with our latest events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Steamsbury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+
+</html>
